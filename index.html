@@ -13,39 +13,41 @@
 </head>
 <body>
     <img src="/images/logo.svg" alt="">
-    <div class="container--calculator">
-        <div class="container--info">
-            <div class="container--left">
-                <label for="bill" id="Lbill">Bill</label>
-                <input type="number"  id="bill" min="0" placeholder="0">
-                <label for="tip" id="st">Select Tip %</label>
-                <div class="tip--container">
-                    <button class="tip" data-tip="5">5%</button>
-                    <button class="tip" data-tip="10">10%</button>
-                    <button class="tip" data-tip="15">15%</button>
-                    <button class="tip" data-tip="25">25%</button>
-                    <button class="tip" data-tip="50">50%</button>
-                    <input type="number" data-tip="0" class="tip" placeholder="CUSTOM" id="tip--input" min="0">
+    <main>
+        <div class="container--calculator">
+            <div class="container--info">
+                <div class="container--left">
+                    <label for="bill" id="Lbill">Bill</label>
+                    <input type="number"  id="bill" min="0" placeholder="0">
+                    <label for="tip" id="st">Select Tip %</label>
+                    <div class="tip--container">
+                        <button class="tip" data-tip="5">5%</button>
+                        <button class="tip" data-tip="10">10%</button>
+                        <button class="tip" data-tip="15">15%</button>
+                        <button class="tip" data-tip="25">25%</button>
+                        <button class="tip" data-tip="50">50%</button>
+                        <input type="number" data-tip="0" class="tip" placeholder="CUSTOM" id="tip--input" min="0">
+                    </div>
+                    <div class="container--nop">
+                        <label for="nop" id="Lnop">Number of people</label>
+                        <div class="negative--info">can't be zero</div>
+                    </div>
+                    <input type="number" class="nop" min="0">
                 </div>
-                <div class="container--nop">
-                    <label for="nop" id="Lnop">Number of people</label>
-                    <div class="negative--info">can't be zero</div>
+                <div class="container--right">
+                    <div id="tip--amount">
+                        <span class="calc--info"><strong>Tip Amount</strong><br>/ person</span>
+                        <h1 id="tip--amount--value">$0.00</h1>
+                    </div>
+                    <div id="total">
+                        <span class="calc--info"><strong>Total</strong><br>/ person</span><br>
+                        <h1 id="total--value">$0.00</h1>
+                    </div>
+                    <div id="reset">reset</div>
                 </div>
-                <input type="number" class="nop" min="0">
-            </div>
-            <div class="container--right">
-                <div id="tip--amount">
-                    <span class="calc--info"><strong>Tip Amount</strong><br>/ person</span>
-                    <h1 id="tip--amount--value">$0.00</h1>
-                </div>
-                <div id="total">
-                    <span class="calc--info"><strong>Total</strong><br>/ person</span><br>
-                    <h1 id="total--value">$0.00</h1>
-                </div>
-                <div id="reset">reset</div>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
         <div>
             Challenge by <a href="https://www.frontendmentor.io/" >Frontend-mentor. 
