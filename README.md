@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/jowribas/Tip-calculator)
+- Live Site URL: (https://tipcalculatorch.netlify.app/)
 
 ## My process
 
@@ -50,5 +50,5 @@ In javascript I used events and functions.
 
 ## Author
 
-- Website - [Tip calculator](https://www.your-site.com)
+- Website - [Tip calculator](https://tipcalculatorch.netlify.app/)
 - Frontend Mentor - [@jowribas](https://www.frontendmentor.io/profile/jowribas)
