@@ -1,0 +1,238 @@
+/* 
+* Author: Jonathan Ribeiro
+* Ending date: 01.11.2022
+*/
+:root {
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --OrangeAlert: hsl(29, 64%, 50%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Lightgrayishcyan);
+}
+.container--calculator{
+    width: 800px;
+    height: 400px;
+    background-color: var(--White);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.container--info{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container--left,
+.container--right{
+    flex: 1;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 30px;
+}
+footer{
+    font-size: 12px;
+}
+
+
+footer a{
+    text-decoration: none;
+}
+
+/* Left ----------------------------------------- */
+
+.container--left{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bill{
+    background-image: url(/images/icon-dollar.svg);  
+}
+
+.nop{
+    background-image: url(/images/icon-person.svg);
+}
+
+#bill,
+.nop{
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 15px;
+    background-color: var(--Verylightgrayishcyan);
+}
+
+input:active, input:focus{ 
+    outline: 2px solid var(--Strongcyan);
+    color: hsl(183, 100%, 15%);
+}
+
+label{
+    color:hsl(186, 14%, 43%);
+}
+
+.tip--container{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--Verydarkcyan);
+    cursor: pointer;
+    border: none;
+    text-align: right;
+    padding: 10px;
+}
+
+.tip:hover{
+    background-color: var(--Strongcyan);
+}
+
+#tip--input{
+    background-color: var(--Verylightgrayishcyan);
+    color:var(--Verydarkcyan);
+}
+
+input::placeholder {
+    color: var(--Verydarkcyan);
+    text-align: center;
+}
+
+#bill::placeholder{
+    color: var(--Verydarkcyan);
+    text-align: right;
+}
+
+/* Right ----------------------------------------- */
+
+.container--right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:var(--Verydarkcyan);
+    color: #fff; 
+}
+
+#tip--amount,
+#total{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.calc--info strong{
+    color: #fff;
+}
+.calc--info{
+    color: var(--Strongcyan);
+}
+#tip--amount h1,
+#total h1{
+    color: var(--Strongcyan);
+}
+
+#reset{
+    width: inherit;
+    height: 50px;
+    background-color: var(--Strongcyan);
+    color:var(--Verydarkcyan);
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+
+#reset:hover{
+    background-color: var(--Verylightgrayishcyan);
+}
+
+/* javascript ----------------------------------------- */
+
+.container--nop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.negative{
+    background-color: var(--Verylightgrayishcyan);
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    outline: 3px solid var(--OrangeAlert);
+}
+
+.negative--info{
+    display: none;
+    color: var(--OrangeAlert);
+}
+
+/* Media query ----------------------------------------- */
+
+@media screen and (max-width: 850px) { 
+    .container--calculator{
+        width: 300px;
+        height: 580px;
+    }
+    .container--info{ 
+        flex-direction: column;
+    }
+    .container--left{
+        flex: 2;
+        padding: 20px;
+    }
+    .container--right{
+        width: 100%;
+        font-size: 12px;
+        padding: 20px;
+    }
+    .tip--container{
+        grid-template-columns: repeat(2, 120px);
+    }
+    #reset{
+        height: 35px;
+    }
+    #bill,
+    .nop{
+        background-size: 10px;
+    }
+    footer{
+        display: none;
+    }
+}
